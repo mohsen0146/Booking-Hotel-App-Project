@@ -1,7 +1,4 @@
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
-* {
-  /* outline: 1px solid red !important; */
-}
 
 .header {
   display: flex;
@@ -132,7 +129,6 @@
 .dateDropDown {
   margin-left: 0.5rem;
   font-size: 0.8rem;
-  /* display: none; */
 }
 
 .headerSearchBtn {
@@ -227,9 +223,16 @@
 /* map */
 
 .mapContainer {
-  flex: 1;
+  flex-basis: 300px;
   background-color: var(--text-100);
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .mapContainer{
+    flex: 1;
+  }
+  
 }
 
 .mapContainer button.getLocation {
@@ -291,9 +294,6 @@
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* min-height: 140rem; */
-  /* background-color: var(--text-100); */
   align-items: stretch;
   gap: 2rem;
 }
