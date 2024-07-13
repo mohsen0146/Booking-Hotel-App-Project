@@ -64,8 +64,14 @@ function Header() {
   };
   return (
     <div className="header">
+      <div className="header">
+        <NavLink to="/bookmark" className="headerBookmarkBtn">
+          <HiBookmark className="bookmark icon" />
+        </NavLink>
+        <User />
+      </div>
       <div className="headerSearch">
-        <div className="headerSearchItem">
+        <div className="headerSearchItem searchBox">
           <MdLocationOn className="headerIcon locationIcon" />
           <input
             value={destination}
@@ -119,12 +125,6 @@ function Header() {
             <HiSearch className="headerIcon" />
           </button>
         </div>
-      </div>
-      <div className="header">
-        <NavLink to="/bookmark" className="headerBookmarkBtn">
-          <HiBookmark className="bookmark icon" />
-        </NavLink>
-        <User />
       </div>
     </div>
   );
@@ -203,7 +203,7 @@ function User() {
           </button>
         </div>
       ) : (
-        <NavLink to="/login" className="headerLoginBtn">
+        <NavLink to="/login">
           <HiUser className="login icon" />
         </NavLink>
       )}
