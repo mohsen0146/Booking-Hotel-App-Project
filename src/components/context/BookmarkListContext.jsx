@@ -3,13 +3,12 @@ import {
   useContext,
   useEffect,
   useReducer,
-  useState,
 } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
 const BookmarkContext = createContext();
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const initalState = {
   bookmarks: [],
